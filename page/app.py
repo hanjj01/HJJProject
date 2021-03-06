@@ -19,8 +19,8 @@ class App(BasePage):
             self._driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
         else:
             self._driver.start_activity(self._package, self._activity)
-        self._driver.implicitly_wait(3)
+        self._driver.implicitly_wait(5)
         return self
 
-    def main(self) -> Main:  # 定义返回类型？
+    def main(self) -> Main:  # 定义返回类型？？？？
         return Main(self._driver)
